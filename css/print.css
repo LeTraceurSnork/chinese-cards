@@ -1,0 +1,29 @@
+@media print {
+    body {
+        padding: 0;
+        background: #fff;
+    }
+
+    .sheets {
+        gap: 0;
+    }
+
+    .toolbar,
+    .add-panel,
+    .card__delete {
+        display: none !important;
+    }
+
+    .sheet {
+        margin: 0;
+    }
+
+    .card {
+        border-color: #999;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}

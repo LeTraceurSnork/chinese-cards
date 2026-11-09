@@ -1,0 +1,8 @@
+:root {
+    --card-w: 90mm;
+    --card-h: 90mm;
+    --sheet-w: 210mm;
+    --sheet-h: 297mm;
+    --sheet-pad-x: 15mm;
+    --sheet-pad-y: 13.5mm;
+}

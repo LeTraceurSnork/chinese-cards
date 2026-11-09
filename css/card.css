@@ -1,0 +1,105 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: hidden;
+    width: var(--card-w);
+    height: var(--card-h);
+    padding: 2.5mm 3mm;
+    border: 0.4mm dashed #bbb;
+    background: #fff;
+    page-break-inside: avoid;
+}
+
+.card__delete {
+    position: absolute;
+    top: 1mm;
+    right: 1mm;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 5mm;
+    height: 5mm;
+    border: none;
+    border-radius: 50%;
+    background: #eee;
+    color: #666;
+    font-size: 3mm;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.card:hover .card__delete {
+    display: flex;
+}
+
+.card__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1mm;
+}
+
+.card__line {
+    display: flex;
+    align-items: center;
+    gap: 1mm;
+    line-height: 1.1;
+}
+
+.card__flag {
+    flex: 0 0 auto;
+    font-size: 5mm;
+    line-height: 1;
+}
+
+.card__text--ru {
+    font-size: 3mm;
+    color: #333;
+}
+
+.card__text--en {
+    font-size: 3.5mm;
+    color: #111;
+    font-weight: 500;
+}
+
+.card__zh {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 3mm;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1mm 0;
+    text-align: center;
+}
+
+.card__hanzi {
+    max-width: 100%;
+    font-size: 10mm;
+    line-height: 1.05;
+    font-weight: 700;
+    text-wrap: balance;
+    font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.card__pinyin {
+    font-size: 3.2mm;
+    color: #555;
+    font-style: italic;
+    letter-spacing: 0.2mm;
+    line-height: 1.1;
+}
+
+.card__picto {
+    display: flex;
+    justify-content: center;
+    gap: 2mm;
+    font-size: 8mm;
+    line-height: 1;
+}

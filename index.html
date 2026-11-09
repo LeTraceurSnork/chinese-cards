@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Карточки для Китая</title>
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/toolbar.css">
+    <link rel="stylesheet" href="./css/add-panel.css">
+    <link rel="stylesheet" href="./css/sheet.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/print.css">
+</head>
+<body>
+
+<header class="toolbar">
+    <button class="toolbar__button" type="button" id="toggleAdd">➕ Добавить карточку</button>
+    <button class="toolbar__button toolbar__button--primary" type="button" onclick="window.print()">🖨 Печать / PDF</button>
+    <span class="toolbar__hint">90×90 мм · 6 карточек на лист A4 (2×3)</span>
+</header>
+
+<section class="add-panel" id="addPanel">
+    <label class="add-panel__row">
+        <input class="add-panel__input" type="text" id="inputRu" placeholder="Русский текст">
+    </label>
+    <label class="add-panel__row">
+        <input class="add-panel__input" type="text" id="inputEn" placeholder="English text">
+    </label>
+    <label class="add-panel__row">
+        <input class="add-panel__input add-panel__input--hanzi" type="text" id="inputZh" placeholder="中文">
+    </label>
+    <label class="add-panel__row">
+        <input class="add-panel__input" type="text" id="inputPinyin" placeholder="Pinyin">
+    </label>
+    <label class="add-panel__row">
+        <input class="add-panel__input" type="text" id="inputIcons" placeholder="Пиктограммы" value="📍">
+    </label>
+    <div class="add-panel__row">
+        <button class="add-panel__button add-panel__button--primary" type="button" id="btnAdd">Добавить карточку</button>
+        <button class="add-panel__button" type="button" id="btnClear">Сбросить к phrases.js</button>
+    </div>
+    <p class="add-panel__hint">Обязательны русский и иероглифы. Постоянный набор — js/phrases.js.</p>
+    <div class="add-panel__status" id="status" role="status"></div>
+</section>
+
+<div class="sheets" id="sheets"></div>
+
+<script src="./js/phrases.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
